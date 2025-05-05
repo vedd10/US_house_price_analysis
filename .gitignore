@@ -1,0 +1,19 @@
+# Ignore Colab notebook checkpoints
+.ipynb_checkpoints/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# VSCode workspace
+.vscode/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Logs and temporary files
+*.log
+
+# Data files (optional – include if files are large or from a private source)
+*.csv
