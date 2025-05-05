@@ -45,7 +45,7 @@ Economic indicators downloaded from FRED (Federal Reserve Economic Data):
 
 ---
 
-## 📈 Visualizations
+## Visualizations
 
 - Home price index trend over time
 - Actual vs Predicted plots
@@ -54,7 +54,7 @@ Economic indicators downloaded from FRED (Federal Reserve Economic Data):
 
 ---
 
-## 🛠️ Requirements
+## Requirements
 
 - Python 3.7+
 - Google Colab (for running notebook)
@@ -64,7 +64,7 @@ Economic indicators downloaded from FRED (Federal Reserve Economic Data):
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Clone the repository:
    ```bash
