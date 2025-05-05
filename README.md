@@ -1,62 +1,67 @@
-# US_House_Price_Analysis
-This repository contains a machine learning model to analyze and forecast U.S. home prices using the S&amp;P Case-Shiller Home Price Index (CSUSHPISA) along with various macroeconomic factors. The project involves data preprocessing, feature engineering, and model evaluation using techniques like Linear Regression, ARIMA, Random Forest, and XGBoost.
+# 🏡 House Price Analysis & Forecasting
 
-# Home Price Modeling
+This project analyzes and forecasts U.S. national home prices using publicly available economic indicators. It utilizes multiple regression and time series models including ARIMA and XGBoost to predict the Case-Shiller U.S. National Home Price Index.
 
-This repository contains a data science project aimed at forecasting U.S. home prices using the S&P Case-Shiller Home Price Index (CSUSHPISA) and key macroeconomic indicators. The goal is to understand how macroeconomic factors have influenced home prices over the last 20 years, using various machine learning models.
+---
 
-## Table of Contents
+## 📊 Data Sources
 
-- [Project Overview]
-- [Data Description]
-- [Methodology]
-- [Installation]
-- [Modeling Techniques]
-- [Results]
-- [Contributors]
+Economic indicators downloaded from FRED (Federal Reserve Economic Data):
 
-## Project Overview
+* CPIAUCSL — Consumer Price Index
+* CSUSHPISA — Case-Shiller Home Price Index (target variable)
+* CUUR0000SEHA — Rent Index
+* FEDFUNDS — Federal Funds Rate
+* GDP, GDPC1 — Gross Domestic Product (nominal and real)
+* POPTHM — Population
+* MEHOINUSA672N — Median Household Income
+* UNRATE — Unemployment Rate
+* MORTGAGE30US — Mortgage Rates
+* RHORUSQ156N — Homeownership Rate
+* HOUST, PERMIT — Housing Starts & Permits
 
-This project aims to build predictive models to forecast home prices in the United States. By using features like inflation rates, unemployment rates, GDP growth, and mortgage rates, we explore their relationship with the home price index.
+---
 
-### Key Highlights:
-- Data preprocessing using missing value handling and feature engineering.
-- Multiple models used, including Linear Regression, ARIMA, Random Forest, and XGBoost.
-- Time-series and non-time-series forecasting techniques.
-- Model evaluation with R-squared (R²), Mean Absolute Error (MAE), and Root Mean Squared Error (RMSE).
+## 📈 Models Implemented
 
-## Data Description
+### 1. Regression Models (on Economic Features)
 
-The dataset used in this project consists of historical home price indices (S&P Case-Shiller Home Price Index) along with other macroeconomic indicators like GDP, inflation, and unemployment rates.
+* Linear Regression
+* Ridge Regression
+* Lasso Regression
+* ElasticNet
+* Random Forest
+* XGBoost ✅ (Best performing, RMSE \~0.15)
 
-- **Source**: [FRED - Federal Reserve Economic Data](https://fred.stlouisfed.org/)
-- **Data Fields**:
-    - `observation_date`: Date of the observation
-    - `CSUSHPISA`: Case-Shiller U.S. National Home Price Index (Target variable)
-    - Additional macroeconomic features like GDP, unemployment rate, inflation rate, etc.
+### 2. Time Series Model
 
-## Methodology
+* ARIMA model to forecast future Case-Shiller Index values.
 
-The project follows the below steps:
+---
 
-1. **Data Preprocessing**:
-   - Cleaning and merging data from multiple CSV files.
-   - Handling missing values using forward fill.
-   - Feature engineering: Lag features for home price indices.
+## 🛠️ Feature Engineering
 
-2. **Modeling**:
-   - **Linear Regression**: Used for simple linear relationships between features and target.
-   - **ARIMA**: Time-series model for predicting future values based on past observations.
-   - **Random Forest**: A non-linear model to capture complex interactions between features.
-   - **XGBoost**: Gradient boosting technique used for regression tasks.
+* Merged multiple CSV files on `observation_date`.
+* Forward-filled missing values (`ffill`).
+* No scaling used (optional: `StandardScaler` for linear models).
 
-3. **Evaluation**:
-   - The models are evaluated using R-squared (R²), Mean Absolute Error (MAE), and Root Mean Squared Error (RMSE).
+---
 
-## Installation
+## 🧪 Evaluation Metrics
 
-Clone the repository to your local machine or Google Colab:
+* RMSE (Root Mean Squared Error)
+* R² Score
 
-```bash
-git clone https://github.com/your-username/home-price-modeling.git
-cd home-price-modeling
+---
+
+## 🔮 Forecasting Insights
+
+* Used lag features with XGBoost to simulate time series prediction.
+* ARIMA captured long-term trends with reasonable accuracy.
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome. For major changes, please open an issue first.
+
